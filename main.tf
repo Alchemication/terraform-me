@@ -1,7 +1,8 @@
 provider "aws" {
-  region     = "eu-west-1"
-  access_key = "*****"
-  secret_key = "*****"
+  # add credentials to ~/.zshrc or ~/.bashrc file:
+  #export AWS_ACCESS_KEY_ID="anaccesskey"
+  #export AWS_SECRET_ACCESS_KEY="asecretkey"
+  #export AWS_REGION="us-west-2"
 }
 
  # 1. Create vpc
@@ -115,7 +116,7 @@ provider "aws" {
 
  # 9. Create Ubuntu server and install/enable apache2
  resource "aws_instance" "web-server-instance" {
-   ami               = "ami-085925f297f89fce1"
+   ami               = "ami-096800910c1b781ba"
    instance_type     = "t2.micro"
    availability_zone = "eu-west-1a"
    key_name          = "main-key"
